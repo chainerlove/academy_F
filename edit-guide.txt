@@ -1,0 +1,23 @@
+캐릭터 정보 수정 방법
+
+script.js 맨 위의 characters 목록에서 다음 항목을 바꾸세요.
+- name: 이름
+- role: 학과/학년
+- ability: 이능
+- personality: 성격
+- etc: 기타
+- image: 대표 이미지 경로
+
+상세 화면의 5개 이미지 이름은 script.js의 galleryLabels에서 바꿀 수 있습니다.
+현재 5개 이미지 모두 대표 이미지를 사용합니다. 각기 다른 이미지로 바꾸려면 script.js의 openProfile 함수에서 photo.image에 원하는 이미지 파일 경로를 입력하면 됩니다.
+
+
+이능 탭 수정 방법
+
+easy-script.js의 abilityData 목록에서 이능 설정을 수정하세요.
+- 첫 번째 값: 번호
+- 두 번째 값: 설정 제목
+- 세 번째 값: 영문 분류명
+- 네 번째 값: 설정 본문
+
+캐릭터 탭의 프로필 정보와 이능 탭의 설정은 서로 독립되어 있습니다.

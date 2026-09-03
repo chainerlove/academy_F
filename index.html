@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아카데미의 F급 | 캐릭터 프로필</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="image-ratios.css">
+  <link rel="stylesheet" href="gallery-seven.css">
+</head>
+<body>
+  <div id="landing" class="screen landing" aria-label="입장 화면">
+    <div class="hero-art"></div><div class="vignette"></div>
+    <p class="click-guide">CLICK TO ENTER <span>↓</span></p>
+  </div>
+  <main id="main" class="screen main">
+    <header class="main-nav">
+      <button class="nav-item" data-section="characters"><span>CHARACTERS</span><strong>캐릭터</strong></button>
+      <button class="nav-item" data-section="abilities"><span>ABILITIES</span><strong>이능</strong></button>
+    </header>
+    <section id="characters" class="panel" aria-labelledby="characters-title">
+      <div class="section-title"><span>CHARACTERS</span><h1 id="characters-title">캐릭터</h1><p>프로필을 선택하면 상세 정보를 확인할 수 있습니다.</p></div>
+      <div class="character-grid" id="characterGrid"></div>
+    </section>
+    <section id="abilities" class="panel" aria-labelledby="abilities-title">
+      <div class="section-title">
+        <span>ABILITY ARCHIVE</span>
+        <h1 id="abilities-title">이능</h1>
+        <p>캐릭터 정보와 완전히 분리된, 이능 자체의 발현과 등급·계열 설정을 기록합니다.</p>
+      </div>
+      <div class="ability-grid" id="abilityGrid"></div>
+    </section>
+    <button class="back" id="back" aria-label="처음으로 돌아가기">←</button>
+  </main>
+  <div class="profile-modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profileName">
+    <button class="modal-dim" data-close aria-label="상세 정보 닫기"></button>
+    <article class="profile-detail">
+      <button class="modal-close" data-close aria-label="닫기">×</button>
+      <div class="detail-portrait"><img id="detailImage" alt=""><span class="image-glow"></span></div>
+      <div class="detail-content"><span class="eyebrow">STUDENT PROFILE</span><h2 id="profileName"></h2><p class="profile-real-name" id="profileRealName" hidden></p><p class="profile-role" id="profileRole"></p>
+        <dl class="profile-fields">
+          <div><dt>이능</dt><dd id="profileAbility"></dd></div>
+          <div><dt>성격</dt><dd id="profilePersonality"></dd></div>
+          <div><dt>기타</dt><dd id="profileEtc"></dd></div>
+        </dl>
+        <section class="character-gallery" aria-labelledby="galleryTitle">
+          <div class="gallery-heading"><span>MEMORIES</span><h3 id="galleryTitle">캐릭터 이미지</h3></div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="image-viewer" id="imageViewer" aria-hidden="true"><button class="viewer-dim" data-viewer-close aria-label="닫기"></button><figure class="viewer-content"><button class="viewer-close" data-viewer-close>×</button><img id="viewerImage" alt=""><figcaption id="viewerCaption"></figcaption></figure></div>
+  <script src="easy-script.js"></script>
+</body>
+</html>
