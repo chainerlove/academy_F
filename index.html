@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아카데미의 F급 | 캐릭터 프로필</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="viewer.css">
+  <link rel="stylesheet" href="image-ratios.css">
+  <link rel="stylesheet" href="gallery-seven.css">
+</head>
+<body>
+  <div id="landing" class="screen landing" aria-label="입장 화면">
+    <div class="hero-art"></div><div class="vignette"></div>
+    <p class="click-guide">CLICK TO ENTER <span>↓</span></p>
+  </div>
+  <main id="main" class="screen main">
+    <header class="main-nav">
+      <button class="nav-item" data-section="characters"><span>CHARACTERS</span><strong>캐릭터</strong></button>
+      <button class="nav-item" data-section="world"><span>WORLD</span><strong>세계관</strong></button>
+    </header>
+    <section id="characters" class="panel" aria-labelledby="characters-title">
+      <div class="section-title"><span>CHARACTERS</span><h1 id="characters-title">캐릭터</h1><p>프로필을 선택하면 상세 정보를 확인할 수 있습니다.</p></div>
+      <div class="character-grid" id="characterGrid"></div>
+    </section>
+    <section id="world" class="panel" aria-labelledby="world-title">
+      <div class="section-title">
+        <span>WORLD ARCHIVE</span>
+        <h1 id="world-title">세계관</h1>
+        <p>미드가르드의 지역과 이능, 아카데미, 유물에 대한 기본 설정입니다.</p>
+      </div>
+      <div class="world-grid">
+        <article class="world-card world-wide">
+          <span>CONTINENT</span><small>MIDGARD</small><strong>미드가르드</strong>
+          <p>왕국력 3069년. 인간·흡혈귀·엘프 등 다양한 종족이 살아가는 대륙.</p>
+          <ul>
+            <li><b>중부</b> — 라그나 아카데미, 왕궁, 대성당</li>
+            <li><b>북부</b> — 끝없이 내리는 눈과 혹한의 땅</li>
+            <li><b>동부</b> — 항구도시와 해상무역, 해양 마수</li>
+            <li><b>남부</b> — 비옥한 평원</li>
+            <li><b>서부</b> — 울창한 숲, 세계수와 엘프의 터전</li>
+          </ul>
+        </article>
+        <article class="world-card">
+          <span>ACADEMY</span><strong>라그나 아카데미</strong>
+          <p>왕립 아카데미. 이능이 발현되면 강제 입학하며, 일반인은 이능석으로 강제 발현 후 입학한다.</p>
+        </article>
+        <article class="world-card">
+          <span>RELIC</span><strong>유물</strong>
+          <p>던전에서 발견되는 강력한 장비. 먼 옛날부터 전해진 신화적인 힘이 깃들어 있다.</p>
+        </article>
+        <section class="world-subsection" aria-labelledby="abilities-title">
+          <div class="subsection-title"><span>ABILITY ARCHIVE</span><h2 id="abilities-title">이능</h2><p>발현 방식과 등급·계열의 기본 규칙.</p></div>
+          <div class="ability-grid" id="abilityGrid"></div>
+        </section>
+      </div>
+    </section>
+    <button class="back" id="back" aria-label="처음으로 돌아가기">←</button>
+  </main>
+  <div class="profile-modal" id="profileModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="profileName">
+    <button class="modal-dim" data-close aria-label="상세 정보 닫기"></button>
+    <article class="profile-detail">
+      <button class="modal-close" data-close aria-label="닫기">×</button>
+      <div class="detail-portrait"><img id="detailImage" alt=""><span class="image-glow"></span></div>
+      <div class="detail-content"><span class="eyebrow">STUDENT PROFILE</span><h2 id="profileName"></h2><p class="profile-real-name" id="profileRealName" hidden></p><p class="profile-role" id="profileRole"></p>
+        <dl class="profile-fields">
+          <div><dt>이능</dt><dd id="profileAbility"></dd></div>
+          <div><dt>성격</dt><dd id="profilePersonality"></dd></div>
+          <div><dt>기타</dt><dd id="profileEtc"></dd></div>
+        </dl>
+        <section class="character-gallery" aria-labelledby="galleryTitle">
+          <div class="gallery-heading"><span>MEMORIES</span><h3 id="galleryTitle">캐릭터 이미지</h3></div>
+          <div class="gallery-grid" id="galleryGrid"></div>
+        </section>
+      </div>
+    </article>
+  </div>
+  <div class="image-viewer" id="imageViewer" aria-hidden="true"><button class="viewer-dim" data-viewer-close aria-label="닫기"></button><figure class="viewer-content"><button class="viewer-close" data-viewer-close>×</button><img id="viewerImage" alt=""><figcaption id="viewerCaption"></figcaption></figure></div>
+  <script src="easy-script.js"></script>
+</body>
+</html>
